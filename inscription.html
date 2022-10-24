@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion / Inscription</title>
+    <link rel="stylesheet" href="inscription.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-page">
+        <div class="sub-page">
+            <div class="navigation-bar">
+                <div class="logo">
+                    <a href='index.html'>La Vie De Jésus</a>
+                </div>
+                <nav>
+                    <ul id='MenuItems'>
+                        <li><a href='index.html'>Accueil</a></li>
+                        <li><a href='top-chretiens.html'>Top Chrétiens</a></li>
+                        <li><a href='courses.html'>Enseignements</a></li>
+                        <li><a href='contact.html'>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <div class="form-box">
+                        <div class="form">
+                            <form class="login-form">
+                                <center><h1 class="main-heading">Formulaire de connexion</h1></center>
+				                <input type="text"placeholder="user name"/>
+				                <input type="password"placeholder="password"/>
+				                <button>Connexion</button>
+				                <p class="message">Pas inscrit? <a href="#">S'INCRIRE</a></p>
+				            </form>
+                            <form class="register-form">
+                                <center><h1 class="main-heading">Formaulre d'inscription</h1></center>
+				                <input type="text" placeholder="user name"/>
+				                <input type="text" placeholder="email-id"/>
+				                <input type="password" placeholder="password"/>
+				                <button>ENREGISTRER</button>
+				                <p class="message">Vraiment inscrit?<a href="#">Connexion</a>
+				                </p>
+				            </form>
+			             </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script>
+    <script>
+        $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
+    </script>
+</body>
+</html>
+

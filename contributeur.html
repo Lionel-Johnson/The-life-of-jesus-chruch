@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="contribution.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--<title>Responsive Regisration Form </title>--> 
+</head>
+<body>
+    <div class="container">
+        <header>Enregistrement</header>
+
+        <form action="post">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Détails du donateur</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nom Complet</label>
+                            <input type="text" placeholder="Entrez votre nom" required>
+                        </div>
+                        <div class="input-field">
+                            <label>E-mail</label>
+                            <input type="text" placeholder="Entrez votre e-mail" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Numéro de téléphone</label>
+                            <input type="number" placeholder="Entrez votre numéro de téléphone" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Genre</label>
+                            <select required>
+                                <option disabled selected>Selectionnez votre genre</option>
+                                <option>Masculin</option>
+                                <option>Féminin</option>
+                                <option>Autres</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>contribution</label>
+                            <input type="text" placeholder="Type de contribution à faire" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Détails d'identité</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Numéro de pièce d'identité</label>
+                            <input type="text" placeholder="Numéro  votre pièce d'identité" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Type de pièce d'identité</label>
+                            <input type="text" placeholder="Entrez le Nom sur la pièce" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date d'établissemeent</label>
+                            <input type="date" placeholder="Entrez la date d'établissemeent" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date d'expiration</label>
+                            <input type="date" placeholder="Entrez Date d'expiration" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Suivant</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Détails de l'adresse</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Type d'adresse</label>
+                            <input type="text" placeholder="Permanent or Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nationalité</label>
+                            <input type="text" placeholder="Entrez votre nationalité" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ville / Pays</label>
+                            <input type="text" placeholder="Enter your state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Quartier / Arrondissement</label>
+                            <input type="text" placeholder="Entrez votre Quartier / Arrondissement" required>
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js">
+        const form = document.querySelector("form"),
+        nextBtn = form.querySelector(".nextBtn"),
+        backBtn = form.querySelector(".backBtn"),
+        allInput = form.querySelectorAll(".first input");
+
+
+nextBtn.addEventListener("click", ()=> {
+    allInput.forEach(input => {
+        if(input.value != ""){
+            form.classList.add('secActive');
+        }else{
+            form.classList.remove('secActive');
+        }
+    })
+})
+
+backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+
+    </script>
+</body>
+</html>
