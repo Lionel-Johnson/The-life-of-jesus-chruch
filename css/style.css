@@ -531,6 +531,36 @@
     width: 25vh;
     text-decoration-color: #FFFFFF;
 }
+.activites{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 70vh;
+    background-color: #06BBCC;
+    margin-left: 60vh;
+    margin-top: 20vh;
+    border-radius: 10px;
+}
+
+.affiches{
+    display: inline-block;
+    width: 25%;
+    height: 25%;
+    border-color: sandybrown;
+}
+.box-1{
+    display: flex;
+    border: solid 2px red;
+    z-index: 1px;
+    width: 15vh;
+    height: 15vh;
+    margin-top: -20vh;
+    margin-left: 75vh;
+    z-index: +2;
+
+}
 /*------------TOP CHRETIENS----------*/
 
 .text-repentance{
